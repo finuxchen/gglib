@@ -1,0 +1,5 @@
+SET(ARRAY_TEST_SRC 
+    ${PROJECT_SOURCE_DIR}/src/gg_array.c
+    ${PROJECT_SOURCE_DIR}/test/array.c)
+
+ADD_EXECUTABLE(array ${ARRAY_TEST_SRC})

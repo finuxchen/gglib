@@ -54,23 +54,23 @@ size_t gg_array_capability(const gg_array_t *thiz)
 }
 
 
-int gg_array_insert(gg_array_t *thiz, ssize_t pos, ...)
-{
-//    assert(thiz != NULL && thiz->c_func != NULL);
-    if (pos < -1 || pos > (ssize_t)thiz->size) {
-        return -1;
-    }
-    
-    if (thiz->elem_size != 0) {
-        thiz->buffer = (void *)calloc(thiz->elem_size, 1);
-    } else {
-        thiz->buffer = (void *)calloc(sizeof(void *), 1);
-        va_list arg_ptr;
-        va_start(arg_ptr, pos);
-
-        va_end(arg_ptr);
-    }
-}
+//int gg_array_insert(gg_array_t *thiz, ssize_t pos, ...)
+//{
+////    assert(thiz != NULL && thiz->c_func != NULL);
+//    if (pos < -1 || pos > (ssize_t)thiz->size) {
+//        return -1;
+//    }
+//    
+//    if (thiz->elem_size != 0) {
+//        thiz->buffer = (void *)calloc(thiz->elem_size, 1);
+//    } else {
+//        thiz->buffer = (void *)calloc(sizeof(void *), 1);
+//        va_list arg_ptr;
+//        va_start(arg_ptr, pos);
+//
+//        va_end(arg_ptr);
+//    }
+//}
 
 
 void gg_array_destroy(gg_array_t *thiz)
